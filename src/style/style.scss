@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header {
+  @apply w-full h-20 shadow-sm fixed top-0 right-0 bg-white z-50
+}
