@@ -18,6 +18,8 @@ export const productReducer = (
   switch (action.type) {
     case ProductsActionTypes.FETCH_PRODUCTS:
       return { ...state, isLoading: true, error: null, products: [] };
+    case ProductsActionTypes.FETCH_PRODUCTS_CATEGORY:
+      return { ...state, isLoading: true, error: null, products: [] };
     case ProductsActionTypes.FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
@@ -38,7 +40,7 @@ export const productReducer = (
       return {
         ...state,
         filteredProducts: action.payload,
-      }
+      };
     default:
       return state;
   }

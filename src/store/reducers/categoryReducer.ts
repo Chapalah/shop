@@ -8,7 +8,7 @@ const initialState: CategoryState = {
   categories: [],
   isLoading: false,
   error: null,
-  selectedCategory: { title: "All" },
+  selectedCategory: "All",
 };
 
 export const categorytReducer = (

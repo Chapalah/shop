@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export interface IProduct {
   id: number;
   title: string;
@@ -22,7 +24,8 @@ export enum ProductsActionTypes {
   FETCH_PRODUCTS = "FETCH_PRODUCTS",
   FETCH_PRODUCTS_SUCCESS = "FETCH_PRODUCTS_SUCCESS",
   FETCH_PRODUCTS_ERROR = "FETCH_PRODUCTS_ERROR",
-  FILTER_PRODUCTS_BY_CATEGORY = 'FILTER_PRODUCTS_BY_CATEGORY'
+  FILTER_PRODUCTS_BY_CATEGORY = "FILTER_PRODUCTS_BY_CATEGORY",
+  FETCH_PRODUCTS_CATEGORY = "FETCH_PRODUCTS_CATEGORY",
 }
 
 interface FetchProductsAction {
@@ -44,8 +47,14 @@ interface FilterProductsByCategory {
   payload: IProduct[];
 }
 
+interface FetchProductsCategoryAction {
+  type: ProductsActionTypes.FETCH_PRODUCTS_CATEGORY;
+  payload: string;
+}
+
 export type ProductAction =
   | FetchProductsAction
   | FetchProductsSuccessAction
   | FetchProductsErrorAction
-  | FilterProductsByCategory;
+  | FilterProductsByCategory
+  | FetchProductsCategoryAction;
