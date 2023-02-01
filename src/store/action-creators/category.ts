@@ -30,6 +30,6 @@ export const fetchCategories = () => {
   };
 };
 
-export const setSelectedCategory = (category: ICategory): CategoryAction => {
+export const setSelectedCategory = (category: string): CategoryAction => {
   return { type: CategoriesActionTypes.CHOOSE_CATEGORY, payload: category };
 };

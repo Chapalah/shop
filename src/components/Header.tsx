@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { CategoriesList } from "../index";
+import { CategoriesList } from "./index";
 
 const Header: FC = () => {
   return (

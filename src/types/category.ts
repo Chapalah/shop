@@ -6,7 +6,7 @@ export interface CategoryState {
   categories: ICategory[];
   isLoading: boolean;
   error: null | string;
-  selectedCategory: ICategory;
+  selectedCategory: string;
 }
 
 export enum CategoriesActionTypes {
@@ -32,7 +32,7 @@ interface FetchCategoriesErrorAction {
 
 interface ChooseCategory {
   type: CategoriesActionTypes.CHOOSE_CATEGORY;
-  payload: ICategory;
+  payload: string;
 }
 
 export type CategoryAction =

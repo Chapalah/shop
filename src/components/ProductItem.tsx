@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { IProduct } from "../../types/product";
+import { IProduct } from "../types/product";
 
 interface ProductProps {
   product: IProduct;
